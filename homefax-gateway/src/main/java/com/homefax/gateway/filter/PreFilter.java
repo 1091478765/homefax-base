@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 
 @Component
-public class TestFilter extends ZuulFilter {
+public class PreFilter extends ZuulFilter {
     @Override
     public String filterType() {
         return FilterConstants.PRE_TYPE;
@@ -28,13 +28,13 @@ public class TestFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-        HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
+      /*  HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
         String token = request.getParameter("token");
         //权限进行校验，如果不通过则返回401权限不足
         if (token == null || "".endsWith(token)){
-            /*RequestContext.getCurrentContext().setSendZuulResponse(false);
-            RequestContext.getCurrentContext().setResponseStatusCode(HttpStatus.SC_UNAUTHORIZED);*/
-        }
+            *//*RequestContext.getCurrentContext().setSendZuulResponse(false);
+            RequestContext.getCurrentContext().setResponseStatusCode(HttpStatus.SC_UNAUTHORIZED);*//*
+        }*/
         return null;
     }
 }

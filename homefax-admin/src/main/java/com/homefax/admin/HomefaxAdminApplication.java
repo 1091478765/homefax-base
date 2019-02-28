@@ -15,7 +15,6 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
 @EnableAdminServer
 @SpringBootApplication
 public class HomefaxAdminApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(HomefaxAdminApplication.class, args);
 	}

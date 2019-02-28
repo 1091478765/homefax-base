@@ -1,9 +1,5 @@
-server:
-  port: 8081
-
 spring:
-  application:
-    name: homefax-config
+  profiles: sit
   cloud:
     config:
       server:
@@ -17,16 +13,6 @@ spring:
 eureka:
   client:
     service-url:
-    #  defaultZone: http://129.211.13.217:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
-
-#暴露远程手动刷新配置接口
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+server:
+  port: 8095

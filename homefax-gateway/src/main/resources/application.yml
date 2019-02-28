@@ -1,17 +1,13 @@
 spring:
+  profiles:
+    active: dev
   application:
-    name: homefax-gateway
+      name: homefax-gateway
   cloud:
     config:
       discovery:
         enabled: true
         service-id: homefax-config
-      profile: dev
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-      #defaultZone: http://129.211.13.217:8761/eureka/
 zuul:
   routes:
     sensitiveHeaders:

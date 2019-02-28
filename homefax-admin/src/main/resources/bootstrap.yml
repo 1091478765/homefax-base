@@ -32,9 +32,6 @@ server:
   port: 8086
 # end::configuration-eureka[]
 
----
-spring:
-  profiles: insecure
 
 ---
 # admin登录的用户名和密码

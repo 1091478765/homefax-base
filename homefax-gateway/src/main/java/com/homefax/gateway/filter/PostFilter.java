@@ -27,7 +27,7 @@ public class PostFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-        RequestContext.getCurrentContext().getResponse().setHeader("X-Foo", UUID.randomUUID().toString()    );
+        //RequestContext.getCurrentContext().getResponse().setHeader("X-Foo", UUID.randomUUID().toString()    );
         return null;
     }
 }

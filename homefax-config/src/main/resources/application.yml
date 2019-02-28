@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: sit
+  application:
+      name: homefax-gateway
+
+#暴露远程手动刷新配置接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
